@@ -1,0 +1,170 @@
+@use "../../scss/" as *;
+
+.navbar {
+  @include flex(center, center);
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // pointer-events: none;
+  background-image: url(../../assets/images/backgroud/BG_Menu.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @include tablet {
+    justify-content: space-between;
+    height: calc($header-height * 2.5);
+    background-image: url(../../assets/images/backgroud/BG_Menu_mobile.png);
+  }
+  @include mobile {
+    height: calc($header-height + 1rem);
+  }
+
+  &__logo {
+    display: none;
+    @include tablet {
+      display: block;
+      margin: 4rem 0 0 2rem;
+      position: absolute;
+    }
+    @include mobile {
+      height: 4rem;
+      margin: 1.5rem 0 0 0.75rem;
+    }
+  }
+
+  &__title {
+    display: none;
+    font-size: 2rem;
+    color: $txt-title;
+    @include tablet {
+      display: block;
+      position: absolute;
+      margin: 0 0 0 12rem;
+    }
+    @include mobile {
+      font-size: 0.75rem;
+      margin: 0 0 0 6rem;
+    }
+  }
+
+  &__menu {
+    @include tablet {
+      content: "";
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      height: calc(100vh - ($header-height * 2.5));
+      top: calc(-100vh - ($header-height * 2.5));
+      overflow: auto;
+      background-color: rgba(3, 18, 38, 0.8);
+      transition: all 0.3s ease-in-out;
+    }
+    @include mobile {
+      height: calc(100vh - ($header-height + 1rem));
+      top: calc($header-height + 1rem);
+    }
+
+    &__item {
+      @include flex(center, center);
+      font-family: $font-family;
+      @include tablet {
+        @include flex(center, space-between);
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        top: 15rem;
+      }
+      @include mobile {
+        top: 5rem;
+      }
+
+      li {
+        @include tablet {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      li ~ li {
+        margin-left: 2rem;
+        @include tablet {
+          margin-left: 0rem;
+        }
+      }
+
+      a {
+        width: 10rem;
+        display: inline-block;
+        padding: calc($header-height / 4) 0;
+        line-height: calc($header-height / 2);
+        text-transform: uppercase;
+        position: relative;
+        pointer-events: visible;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+        @include tablet {
+          width: 100%;
+          padding: calc($header-height / 4);
+          line-height: calc($header-height + 3rem);
+          font-size: 2rem;
+        }
+        @include mobile {
+          line-height: calc($header-height);
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: $main-color;
+          @include tablet {
+            width: 80%;
+            background: linear-gradient(
+              0.25turn,
+              rgba(153, 66, 47, 0),
+              #ff2f00,
+              rgba(153, 66, 47, 0)
+            );
+          }
+        }
+      }
+
+      .active {
+        content: "";
+        background-color: $main-color;
+        @include tablet {
+          width: 80%;
+          background: linear-gradient(
+            0.25turn,
+            rgba(153, 66, 47, 0),
+            #ff2f00,
+            rgba(153, 66, 47, 0)
+          );
+        }
+      }
+    }
+  }
+  .menu__active{
+    top: calc($header-height * 2.5);
+  }
+
+  .cross__icons {
+    display: none;
+    @include tablet {
+      display: block;
+      position: absolute;
+      margin: 0 5rem 0 0;
+      right: 0;
+      z-index: 100;
+    }
+    @include mobile {
+      margin: 0 1.5rem 0 0;
+    }
+    img {
+      @include mobile {
+        width: 3rem;
+        height: 2.25rem;
+      }
+    }
+  }
+}
