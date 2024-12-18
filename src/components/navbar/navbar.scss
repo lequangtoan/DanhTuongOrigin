@@ -7,11 +7,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  // pointer-events: none;
+  pointer-events: none;
   background-image: url(../../assets/images/backgroud/BG_Menu.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   @include tablet {
+    pointer-events: all;
     justify-content: space-between;
     height: calc($header-height * 2.5);
     background-image: url(../../assets/images/backgroud/BG_Menu_mobile.png);
@@ -62,7 +63,7 @@
     }
     @include mobile {
       height: calc(100vh - ($header-height + 1rem));
-      top: calc($header-height + 1rem);
+      top: calc(-100vh - ($header-height + 1rem));
     }
 
     &__item {
@@ -144,8 +145,13 @@
       }
     }
   }
-  .menu__active{
-    top: calc($header-height * 2.5);
+  .menu__active {
+    @include tablet {
+      top: calc($header-height * 2.5);
+    }
+    @include mobile {
+      top: calc($header-height + 1rem);
+    }
   }
 
   .cross__icons {
