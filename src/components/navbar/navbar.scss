@@ -4,6 +4,7 @@
   @include flex(center, center);
   height: $header-height;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,7 +38,7 @@
   &__title {
     display: none;
     font-size: 2rem;
-    color: $txt-title;
+    color: $txt-color-white;
     @include tablet {
       display: block;
       position: absolute;

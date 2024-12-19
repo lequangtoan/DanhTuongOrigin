@@ -1,0 +1,16 @@
+@use "../../scss/" as *;
+
+.section {
+  video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &.active {
+    visibility: visible;
+  }
+}

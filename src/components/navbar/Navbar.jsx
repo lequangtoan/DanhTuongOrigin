@@ -39,7 +39,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="cross__icons" onClick={handleClick}>
-        <img src={open ? MenuClose : MenuOption} alt="Menu-Option" />
+        <img src={MenuOption} alt="Menu-Option" />
       </div>
     </div>
   );
