@@ -1,0 +1,242 @@
+@use "../../../scss/" as *;
+
+.site__person {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  @include tablet {
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/images/backgroud/home-BG/BG_Frame3.png)
+      no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+  }
+  &__title {
+    height: 10rem;
+    margin-top: calc($header-height + 1rem);
+    margin-bottom: 1.5rem;
+    background: url(../../../assets/images/title/home_title/Danh_Tuong_Tam_Quoc.png)
+      no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    @include tablet {
+      margin-top: calc($header-height * 3);
+      margin-bottom: 0;
+    }
+  }
+
+  &__title__bg {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    background: url(../../../assets/images/item/Footage.png);
+    background-repeat: repeat-x;
+    background-position: 100% 100%;
+    background-size: contain;
+    top: 30%;
+    @include tablet {
+      top: 25rem;
+    }
+    @include mobile {
+      top: 30%;
+    }
+  }
+
+  &__center {
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    @include flex(flex-start, space-between);
+    @include tablet {
+      width: 95%;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &__battle {
+      width: 35%;
+      position: relative;
+      @include tablet {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+      }
+      &__tab {
+        @include flex(flex-start, space-around);
+        margin-top: 25%;
+        @include tablet {
+          margin-top: 0%;
+        }
+        @include mobile {
+          margin-top: 0%;
+        }
+        &__swiper {
+          display: none;
+          .site__person__center__battle__swiper__wrapper {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin-top: -40%;
+            background: url(../../../assets/images/backgroud/Slide_Char.png)
+              no-repeat;
+            background-size: 100% 100%;
+            .site__person__center__battle__swiper__item {
+              margin: 80% 0.25rem 0.25rem;
+              .swiper__slide__show {
+                display: block;
+                position: relative;
+                width: 95%;
+                height: 95%;
+                margin: 5% auto 0 auto;
+              }
+              .active:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: url(../../../assets/images/active/Avatar_Char.png)
+                  no-repeat;
+                background-size: 100% 100%;
+              }
+              .swiper__slide__hidden {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .site__person__center__active {
+          display: block;
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__item {
+      width: 65%;
+      position: relative;
+      @include tablet {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      &__CV {
+        width: 95%;
+        @include flex(flex-start, center);
+        @include tablet {
+          width: 85%;
+          flex-direction: row-reverse;
+          margin: 5% auto 0;
+        }
+
+        &__bg {
+          width: 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        &__bg_hidden {
+          display: none;
+        }
+
+        &__description {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          margin-top: 15%;
+          @include tablet {
+            margin-top: 0%;
+          }
+          &__cv {
+            &__name {
+              width: auto;
+              height: auto;
+              @include mobile {
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+
+          &__introduction {
+            font-size: 100%;
+            color: #7f181e;
+            font-weight: 400;
+            @include tablet {
+              font-size: 0.75rem;
+            }
+            @include mobile {
+              margin: 1rem 0 0 0;
+            }
+          }
+          &__skill {
+            width: 100%;
+            text-align: center;
+            margin: 1rem auto 0;
+            @include mobile {
+              gap: 0.25rem;
+            }
+
+            img {
+              width: 15%;
+              height: 15%;
+              margin-right: 0.5rem;
+            }
+            &:nth-of-type(2n) {
+              margin-right: 0;
+            }
+          }
+          &__video {
+            background-color: #00000080;
+            width: 95%;
+            height: fit-content;
+            margin: 1rem auto;
+            border: 2px #fff solid;
+            box-shadow: -4px 0px $main-color, 0px -4px $main-color,
+              4px 0px $main-color, 0px 4px $main-color;
+
+            iframe {
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              width: 100%;
+              height: 10rem;
+              @include tablet{
+                height: 10rem;
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        width: 5%;
+        height: 10%;
+        background-image: url(../../../assets/images/button/Arrow_Left.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        &:after {
+          display: none;
+        }
+      }
+      .swiper-button-next {
+        width: 5%;
+        height: 10%;
+        background-image: url(../../../assets/images/button/Arrow_Right.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

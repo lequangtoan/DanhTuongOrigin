@@ -1,0 +1,37 @@
+@use "../../scss/" as *;
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  visibility: hidden;
+
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    @include tablet {
+      right: auto;
+      left: 50%;
+      transform: translate(-50%);
+      display: none !important;
+      opacity: 0 !important;
+    }
+    @include mobile {
+      left: 50%;
+      transform: translate(-50%);
+      display: none !important;
+      opacity: 0 !important;
+    }
+  }
+
+  &.active {
+    visibility: visible;
+  }
+
+  // &.active &__content {
+  //   transform: scale(1);
+  //   opacity: 1;
+  // }
+}

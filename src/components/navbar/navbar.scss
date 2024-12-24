@@ -1,0 +1,174 @@
+@use "../../scss/" as *;
+
+.navbar {
+  @include flex(center, center);
+  height: $header-height;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-image: url(../../assets/images/backgroud/BG_Menu.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @include tablet {
+    pointer-events: all;
+    text-align: center;
+    justify-content: space-between;
+    height: calc($header-height * 2);
+    background-image: url(../../assets/images/backgroud/BG_Menu_mobile.png);
+  }
+  @include mobile {
+    height: calc($header-height * 2);
+  }
+  &__logo {
+    display: none;
+    @include tablet {
+      display: inline;
+      pointer-events: all;
+      justify-content: space-between;
+      height: calc(($header-height * 2) - 1rem);
+      margin: 0 1rem;
+    }
+    @include mobile {
+      height: calc(($header-height * 2) - 1rem);
+    }
+  }
+  &__btn {
+    display: none;
+    @include tablet {
+      @include flex(center, center);
+      right: 0;
+      left: 0;
+    }
+    .slide-btn {
+      img {
+        @include tablet {
+          height: calc($header-height + 1rem);
+          margin-left: 2.5rem;
+        }
+        @include mobile {
+          height: calc($header-height + 1rem);
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+  &__menu {
+    @include tablet {
+      position: fixed;
+      width: 100%;
+      z-index: -100;
+      text-align: center;
+      top: calc(-100vh - $header-height);
+
+      transition: all 0.3s ease-in-out;
+    }
+    &__item {
+      @include flex(center, center);
+      flex-direction: row;
+      @include tablet {
+        top: $header-height;
+        height: calc(100vh - $header-height);
+        flex-direction: column;
+        gap: 2rem;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(3, 18, 38, 0.8);
+      }
+      a {
+        width: 100%;
+        height: $header-height;
+        @include tablet {
+          height: calc($header-height * 2);
+          line-height: calc($header-height * 2);
+          text-align: center;
+        }
+        li {
+          width: 10rem;
+          font-family: $font-family;
+          line-height: $header-height;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.25rem;
+          text-align: center;
+          @include tablet {
+            width: 100%;
+            font-size: 2rem;
+            height: calc($header-height * 2);
+            line-height: calc($header-height * 2);
+            text-align: center;
+          }
+          &:hover {
+            background-color: $main-color;
+            @include tablet {
+              background-color: unset;
+            }
+          }
+        }
+      }
+      .active {
+        width: 100%;
+        height: $header-height;
+        background-color: $main-color;
+        @include tablet {
+          width: 80%;
+          height: calc($header-height * 2);
+          line-height: calc($header-height * 2);
+          background: linear-gradient(
+            0.25turn,
+            rgba(153, 66, 47, 0),
+            #ff2f00,
+            rgba(153, 66, 47, 0)
+          );
+        }
+      }
+    }
+  }
+  .menu__active {
+    @include tablet {
+      top: calc($header-height);
+    }
+  }
+  &__icons {
+    display: none;
+    @include tablet {
+      display: block;
+      pointer-events: all;
+      margin: auto 2rem;
+    }
+    @include mobile {
+    }
+  }
+  &__ground {
+    display: none;
+    @include tablet {
+      position: fixed;
+      @include flex(center, space-around);
+      left: 0;
+      width: 100%;
+      height: $header-height;
+      top: calc($header-height * 2);
+      pointer-events: all;
+      background-image: url(../../assets/images/backgroud/BG_Menu_mobile.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    @include mobile {
+      height: $header-height;
+      top: calc($header-height * 2);
+    }
+    .slide-btn__ground {
+      img {
+        @include tablet {
+          height: calc($header-height / 2);
+        }
+        @include mobile {
+          height: calc($header-height / 2);
+        }
+      }
+    }
+  }
+}

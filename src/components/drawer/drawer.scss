@@ -1,0 +1,52 @@
+@use "../../scss/" as *;
+
+.slide {
+  z-index: 100;
+  position: absolute;
+  top: calc($header-height * 2);
+  top: 50%;
+  right: -160px;
+  display: flex;
+  align-items: center;
+  transform: translateX(0);
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+  @include tablet{
+    display: none;
+  }
+
+  .slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 9rem;
+    height: 31rem;
+    padding: 0.25rem 0 0.25rem 0.04rem;
+    background: url(../../assets/images/backgroud/Frame_icon_button.png) no-repeat;
+    background-size: 100% 100%;
+
+    .slide-content-btn {
+      width: 7.5rem;
+      height: auto;
+      margin-bottom: .3rem;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .slide-content-ground{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: .25rem 0 .5rem;
+      .slide-content-ground-btn{
+        width: 3rem;
+      }
+    }
+  }
+}
+.show{
+  right: 10px;
+}

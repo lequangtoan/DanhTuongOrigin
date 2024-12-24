@@ -1,0 +1,70 @@
+@use "../../../scss/" as *;
+
+.welcome {
+  @include tablet {
+    width: auto;
+    height: auto;
+    background: url(../../../assets/images/backgroud/home-BG/BG_Frame1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    margin-top: calc($header-height * 3);
+  }
+  @include mobile {
+    background-position: 50% 50%;
+  }
+
+  &__logo {
+    display: none;
+    @include tablet {
+      width: 90%;
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    img {
+      @include tablet {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__info {
+    @include flex(flex-end, flex-end);
+    position: absolute;
+    bottom: 10rem;
+    right: 15rem;
+    @include tablet {
+      display: none;
+    }
+
+    &__content {
+      background-image: url("../../../assets/images/backgroud/Frame_Icon.png");
+      background-repeat: no-repeat;
+
+      .info__app {
+        padding: 8px 20px;
+        @include flex(center, space-around);
+
+        &__mobile,
+        &__pc,
+        &__pay {
+          padding-left: 7px;
+        }
+
+        &__mobile {
+          @include flex(center, center);
+          flex-direction: column;
+
+          a ~ a {
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}

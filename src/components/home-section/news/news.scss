@@ -1,0 +1,158 @@
+@use "../../../scss/" as *;
+
+.site__news {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  @include tablet {
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/images/backgroud/home-BG/BG_Frame2.png)
+      no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+  }
+
+  &__title {
+    height: 10rem;
+    margin-top: calc($header-height + 1rem);
+    margin-bottom: 1.5rem;
+    background: url(../../../assets/images/title/home_title/News.png) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    @include tablet {
+      margin-top: calc($header-height * 3);
+      margin-bottom: 0;
+    }
+  }
+  &__center {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    &__tabs {
+      @include flex(center, center);
+      gap: 2rem;
+      margin: 0 auto 2rem;
+    }
+
+    &__content {
+      @include flex(flex-start, center);
+      gap: 4rem;
+      @include tablet {
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 4rem;
+      }
+      @include mobile {
+        gap: 2rem;
+      }
+
+      &__bg {
+        width: 55%;
+        height: 50%;
+        border: 5px $main-color solid;
+        box-shadow: 10px 10px $second-color;
+        overflow: hidden;
+        @include tablet {
+          width: 100%;
+          height: 50%;
+        }
+        img{
+          width: 100%;
+          // height: 40rem;
+          vertical-align: middle;
+        }
+      }
+
+      &__list {
+        @include flex(flex-start, space-between);
+        flex-direction: column;
+        width: 45%;
+        height: 50%;
+        @include tablet {
+          width: 100%;
+          height: 50%;
+        }
+
+        &__title {
+          width: 100%;
+          height: 100%;
+
+          .site__news__slide__in {
+            @include flex(flex-start, space-around);
+            gap: 4rem;
+            font-family: $font-family;
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-stretch: normal;
+            text-transform: capitalize;
+            line-height: 3.5rem;
+            letter-spacing: 0;
+            color: $txt-color;
+            border-bottom: 0.1rem solid $txt-color;
+            cursor: pointer;
+
+            @include tablet {
+              @include flex(center, space-around);
+            }
+
+            &__content {
+              display: flex;
+              align-items: center;
+              width: 60%;
+
+              &__dot {
+                width: 5%;
+                margin: 0 1rem;
+              }
+
+              &__title {
+                width: 60%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+
+            &__time {
+              width: 25%;
+              text-align: center;
+              overflow: hidden;
+              color: $txt-color;
+            }
+          }
+          li:hover,
+          .site__news__slide__in:hover {
+            color: $color-active;
+            border-bottom: 0.1rem solid $color-active;
+            .site__news__slide__in__content {
+              &__title {
+                transform: translateY(-0.5rem);
+              }
+            }
+            .site__news__slide__in__time {
+              color: $color-active;
+            }
+          }
+        }
+
+        &__more-link {
+          position: absolute;
+          bottom: 0;
+          @include tablet {
+            left: 0;
+            right: 0;
+            bottom: 10%;
+          }
+
+          img {
+            width: 100%;
+            @include tablet {
+              width: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
