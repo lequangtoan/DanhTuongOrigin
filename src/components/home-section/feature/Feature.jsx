@@ -3,9 +3,8 @@ import "./feature.scss";
 import { debounce } from "lodash";
 import React, { useEffect, useRef, useState } from "react";
 import HomeSection from "../HomeSection";
-import { BgFrame5 } from "../../../assets/videos";
+import { BgFrame4 } from "../../../assets/videos";
 import { homeFeature } from "./../../../assets/images/feature/feature";
-import Footer from './../../footer/Footer';
 
 const Feature = (props) => {
   const [data] = useState(homeFeature);
@@ -61,7 +60,7 @@ const Feature = (props) => {
     <HomeSection
       className={`feature ${props.isActive ? "active" : ""}`}
       contentClassName="feature__content"
-      bgImage={BgFrame5}
+      bgImage={BgFrame4}
     >
       <div className="site__feature">
         <div className="site__feature__title"></div>
@@ -136,7 +135,6 @@ const Feature = (props) => {
           </ul>
         </div>
       </div>
-      <Footer/>
     </HomeSection>
   );
 };

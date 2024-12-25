@@ -12,6 +12,7 @@ import {
   Feature,
 } from "./../../components/home-section";
 import { Scrolling } from "../../assets/images/item/item";
+import Footer from "../../components/home-section/footer/Footer";
 
 const swiperOptions = {
   modules: [Pagination, Mousewheel, EffectFade],
@@ -27,45 +28,44 @@ const swiperOptions = {
 
 const Home = () => {
   useEffect(() => {
-    const sectionswelcome = document.querySelectorAll(".welcome");
+    const welcome = document.querySelectorAll(".welcome");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const sliderwelcome = document.getElementById("slide");
+          const slider = document.getElementById("slide");
           if (entry.isIntersecting) {
-            sliderwelcome?.classList?.remove("show");
+            slider?.classList?.remove("show");
           } else {
-            sliderwelcome?.classList?.add("show");
+            slider?.classList?.add("show");
           }
         });
       },
       { threshold: 0.5 }
     );
-    sectionswelcome.forEach((section) => observer.observe(section));
+    welcome.forEach((section) => observer.observe(section));
     return () => {
-      sectionswelcome.forEach((section) => observer.unobserve(section));
+      welcome.forEach((section) => observer.unobserve(section));
     };
   }, []);
 
   useEffect(() => {
-    const sectionsfeature = document.querySelectorAll(".feature");
-    const scrolled = new IntersectionObserver(
+    const feature = document.querySelectorAll(".footer");
+    const scroll = new IntersectionObserver(
       (entries) => {
-        // entries.forEach((entry) => {
-        const scrolled = document.getElementById("scrolled");
+        const scroll = document.getElementById("scroll");
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            scrolled?.classList?.add("hidden");
+            scroll?.classList?.add("hidden");
           } else {
-            scrolled?.classList?.remove("hidden");
+            scroll?.classList?.remove("hidden");
           }
         });
       },
       { threshold: 0.5 }
     );
-    sectionsfeature.forEach((section) => scrolled.observe(section));
+    feature.forEach((section) => scroll.observe(section));
     return () => {
-      sectionsfeature.forEach((section) => scrolled.unobserve(section));
+      feature.forEach((section) => scroll.unobserve(section));
     };
   }, []);
 
@@ -87,8 +87,11 @@ const Home = () => {
         <SwiperSlide>
           {({ isActive }) => <Feature isActive={isActive} />}
         </SwiperSlide>
+        <SwiperSlide>
+          {({ isActive }) => <Footer isActive={isActive} />}
+        </SwiperSlide>
       </Swiper>
-      <div className="scrolled" id="scrolled">
+      <div className="scrolled" id="scroll">
         <span>
           <img src={Scrolling} alt="" />
         </span>

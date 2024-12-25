@@ -32,7 +32,7 @@ const Comic = (props) => {
                     isTabs === btn?.namebtn
                       ? "lanning____tabs__item__active"
                       : ""
-                  }`}
+                  } slide-in-right_${id}`}
                   key={id}
                   onClick={() => setIsTabs(btn?.namebtn)}
                 >

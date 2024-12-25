@@ -9,7 +9,6 @@ const Navbar = () => {
   const handleClick = () => {
     setOpen(!open);
   };
-  console.log(open);
 
   return (
     <div className="container">

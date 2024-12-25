@@ -21,6 +21,7 @@ const Person = (props) => {
 
   const swiperPerson = {
     modules: [Navigation, Thumbs],
+    loop: true,
     rewind: true,
     speed: 600,
     grabCursor: true,
@@ -139,8 +140,8 @@ const Person = (props) => {
                             alt={`skill-${cvperson?.skill.skill4}`}
                           />
                         </div>
-                        <div className="site__person__center__item__CV__description__video slide-in-right_3">
-                          <iframe src="https://resource.lingxigames.com/ds_resource/video/2625/187MWLY2DE9o.mp4"></iframe>
+                        <div >
+                          <iframe className="site__person__center__item__CV__description__video slide-in-right_3" src="https://resource.lingxigames.com/ds_resource/video/2625/187MWLY2DE9o.mp4"></iframe>
                         </div>
                       </div>
                     </div>

@@ -29,7 +29,7 @@ const News = (props) => {
               <li
                 className={`site__news__center__tabs__item ${
                   isTabs === btn?.namebtn ? "new__tabs__item__active" : ""
-                }`}
+                } slide-in-right_${id}`}
                 key={id}
                 onClick={() => setIsTabs(btn?.namebtn)}
               >
@@ -49,12 +49,12 @@ const News = (props) => {
             ))}
           </ul>
           <div className="site__news__center__content">
-            <div className="site__news__center__content__bg">
+            <div className="site__news__center__content__bg site-slide-in-bottom_0">
               <img src={test} alt={`image-${test}`} />
             </div>
             <div className="site__news__center__content__list">
               <ul className="site__news__center__content__list__title">
-                <li className="site__news__slide__in">
+                <li className="site__news__slide__in site-slide-in-bottom_1">
                   <p className="site__news__slide__in__content">
                     <div className="site__news__slide__in__content__dot">
                       <img src={Stick} alt="" />
@@ -68,7 +68,7 @@ const News = (props) => {
                   </span>
                 </li>
 
-                <li className="site__news__slide__in">
+                <li className="site__news__slide__in site-slide-in-bottom_2">
                   <p className="site__news__slide__in__content">
                     <div className="site__news__slide__in__content__dot">
                       <img src={Stick} alt="" />
@@ -82,7 +82,7 @@ const News = (props) => {
                   </span>
                 </li>
 
-                <li className="site__news__slide__in">
+                <li className="site__news__slide__in site-slide-in-bottom_3">
                   <p className="site__news__slide__in__content">
                     <div className="site__news__slide__in__content__dot">
                       <img src={Stick} alt="" />
@@ -96,7 +96,7 @@ const News = (props) => {
                   </span>
                 </li>
 
-                <li className="site__news__slide__in">
+                <li className="site__news__slide__in site-slide-in-bottom_4">
                   <p className="site__news__slide__in__content">
                     <div className="site__news__slide__in__content__dot">
                       <img src={Stick} alt="" />
@@ -110,7 +110,7 @@ const News = (props) => {
                   </span>
                 </li>
               </ul>
-              <div className="site__news__center__content__list__more-link">
+              <div className="site__news__center__content__list__more-link site-slide-in-bottom">
                 <img src={xemthemnormal} alt="" />
               </div>
             </div>

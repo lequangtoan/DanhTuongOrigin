@@ -82,14 +82,15 @@
             @include flex(flex-start, space-around);
             gap: 4rem;
             font-family: $font-family;
-            font-size: 1.5rem;
-            font-weight: 400;
+            font-size: 1.25rem;
+            font-weight: 300;
             font-stretch: normal;
             text-transform: capitalize;
+            text-shadow: #797474 1px 0 10px;
             line-height: 3.5rem;
             letter-spacing: 0;
             color: $txt-color;
-            border-bottom: 0.1rem solid $txt-color;
+            border-bottom: 0.05rem solid $txt-color;
             cursor: pointer;
 
             @include tablet {

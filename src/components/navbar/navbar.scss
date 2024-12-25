@@ -91,9 +91,21 @@
           font-family: $font-family;
           line-height: $header-height;
           text-transform: uppercase;
+          text-shadow: #FC0 1px 0 10px;
           font-weight: 400;
           font-size: 1.25rem;
           text-align: center;
+          &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            display: block;
+            background: $main-color;
+            width: 10rem;
+            height: 0rem;
+            transition: all 0.2s ease;
+          }
           @include tablet {
             width: 100%;
             font-size: 2rem;
@@ -102,9 +114,13 @@
             text-align: center;
           }
           &:hover {
-            background-color: $main-color;
-            @include tablet {
-              background-color: unset;
+            &:after {
+              width: 10rem;
+              height: $header-height;
+              background: $main-color;
+              @include tablet {
+                background-color: unset;
+              }
             }
           }
         }
