@@ -41,6 +41,25 @@
         height: 100%;
       }
     }
+
+    .voucherCenter {
+      animation: flase 1s ease infinite;
+      &:hover{
+        animation: none;
+      }
+    }
+    @keyframes flase {
+      0% {
+        filter: brightness(1.5);
+      }
+      50% {
+        filter: brightness(1);
+      }
+      100% {
+        filter: brightness(1.5);
+      }
+    }
+
     .slide-content-ground {
       @include flex(center, center);
       flex-wrap: wrap;
@@ -59,6 +78,7 @@
     }
   }
 }
+
 .show {
   right: 10px;
 }

@@ -44,7 +44,7 @@ const Welcome = (props) => {
               </a>
             </div>
             <div className="info__app__pay">
-              <a className="napthe ten__hover" target="_blank" href="http://">
+              <a className="napthe ten__hover voucherCenter" target="_blank" href="http://">
                 <img src={NapThe} alt="card" />
               </a>
             </div>

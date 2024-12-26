@@ -72,12 +72,13 @@ const Home = () => {
   // const ref = useRef();
 
   // useEffect(() => {
-  //   ref.current.pause();
+    // document.getElementById("backgroundMusic").play();
+    // ref.current.play();
   // }, []);
 
   return (
     <>
-      <audio src={TamQuocVoSong} autoPlay={true} loop></audio>
+      {/* <audio  id="backgroundMusic" ref={ref} src={TamQuocVoSong} autoPlay={true} controls muted loop/> */}
       <Swiper {...swiperOptions}>
         <SwiperSlide>
           {({ isActive }) => <Welcome isActive={isActive} />}

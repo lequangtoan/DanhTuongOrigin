@@ -7,7 +7,7 @@ const Drawer = () => {
   return (
     <div className="slide" id="slide">
       <div className="slide-content">
-        <a href="##" className="slide-content-btn">
+        <a className="slide-content-btn">
           <img src={IconGame} alt="ios" />
         </a>
         <a href="##" className="slide-content-btn">
@@ -17,25 +17,25 @@ const Drawer = () => {
           <img src={CHPlay} alt="google" />
         </a>
         <a href="##" className="slide-content-btn">
-          <img src={GiaLapPCButton} alt="voucherCenter" />
+          <img src={GiaLapPCButton} alt="GiaLapPC" />
         </a>
-        <a href="##" className="slide-content-btn">
+        <a href="##" className="slide-content-btn voucherCenter">
           <img src={ButtonNapThe} alt="voucherCenter" />
         </a>
         <div className="slide-content-ground">
           <a href="##" className="slide-content-ground-btn" target="_blank">
-            <img src={CongDong} alt="voucherCenter" />
+            <img src={CongDong} alt="CongDong" />
           </a>
           <a href="##" className="slide-content-ground-btn" target="_blank">
-            <img src={FB} alt="voucherCenter" />
+            <img src={FB} alt="facebook" />
           </a>          <a href="##" className="slide-content-ground-btn" target="_blank">
-            <img src={Tiktok} alt="voucherCenter" />
+            <img src={Tiktok} alt="tiktok" />
           </a>
           <a href="##" className="slide-content-ground-btn" target="_blank">
-            <img src={Discord} alt="voucherCenter" />
+            <img src={Discord} alt="discord" />
           </a>
           <a href="##" className="slide-content-ground-btn" target="_blank">
-            <img src={Youtube} alt="voucherCenter" />
+            <img src={Youtube} alt="youtube" />
           </a>
         </div>
       </div>
