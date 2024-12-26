@@ -19,15 +19,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 13rem;
-    height: 50rem;
+    width: 10rem;
+    height: 45rem;
     padding: 7rem 0 0.25rem 0.4rem;
     background: url(../../assets/images/backgroud/Frame_icon_button.png)
       no-repeat;
     background-size: 100% 100%;
 
     .slide-content-btn {
-      width: 9rem;
+      width: 7rem;
       height: auto;
       margin-bottom: 0.3rem;
 
@@ -66,7 +66,7 @@
       gap: 0.5rem;
       margin: 0.25rem 0 0.5rem;
       .slide-content-ground-btn {
-        width: 3rem;
+        width: 2.5rem;
         &:nth-of-type(2n) {
           margin-right: 0;
         }
