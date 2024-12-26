@@ -1,10 +1,13 @@
 import "./navbar.scss";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { CongDong, Discord, FB, IconGame, Tiktok, Youtube } from "../../assets/images/info/info";
+import { IconGame } from "../../assets/images/info/info";
 import {
   btn_napthe,
   btn_taigame,
+  Discord,
+  Fanpage,
+  Group,
   MenuOption,
 } from "../../assets/images/button/button";
 
@@ -104,17 +107,13 @@ const Navbar = () => {
         </div>
         <div className="navbar__ground">
           <a href="##" className="slide-btn__ground">
-            <img src={CongDong} alt="napthe" />
+            <img src={Fanpage} alt="napthe" />
           </a>
           <a href="##" className="slide-btn__ground">
-            <img src={FB} alt="napthe" />
+            <img src={Group} alt="napthe" />
           </a>
           <a href="##" className="slide-btn__ground">
-            <img src={Tiktok} alt="napthe" />
-          </a>          <a href="##" className="slide-btn__ground">
             <img src={Discord} alt="napthe" />
-          </a>          <a href="##" className="slide-btn__ground">
-            <img src={Youtube} alt="napthe" />
           </a>
         </div>
       </div>
