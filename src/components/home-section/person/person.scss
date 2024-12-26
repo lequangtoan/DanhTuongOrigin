@@ -123,6 +123,7 @@
       width: 65%;
       position: relative;
       @include tablet {
+        display: block;
         width: 100%;
         margin-top: 0.5rem;
       }
@@ -207,7 +208,7 @@
               background-repeat: no-repeat;
               width: 100%;
               height: 10rem;
-              @include tablet{
+              @include tablet {
                 height: 10rem;
               }
             }
@@ -216,26 +217,41 @@
       }
 
       .swiper-button-prev {
-        width: 5%;
-        height: 10%;
-        background-image: url(../../../assets/images/button/Arrow_Left.png);
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        background-position: center;
+        display: none;
+        @include tablet {
+          display: block;
+          width: 5%;
+          height: 10%;
+          background-image: url(../../../assets/images/button/Arrow_Left.png);
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: center;
+        }
         &:after {
           display: none;
         }
       }
       .swiper-button-next {
-        width: 5%;
-        height: 10%;
-        background-image: url(../../../assets/images/button/Arrow_Right.png);
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        background-position: center;
+        display: none;
+        @include tablet {
+          display: block;
+          width: 5%;
+          height: 10%;
+          background-image: url(../../../assets/images/button/Arrow_Right.png);
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: center;
+        }
         &:after {
           display: none;
         }
+      }
+    }
+
+    &__item-mobile {
+      display: none;
+      @include tablet {
+        display: block;
       }
     }
   }

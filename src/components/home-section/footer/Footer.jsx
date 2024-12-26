@@ -3,7 +3,7 @@ import "./footer.scss";
 import React from "react";
 import HomeSection from "../HomeSection";
 import { BgFrame4 } from "../../../assets/videos";
-import { old, redfoxlogo } from "../../../assets/images/item/item";
+import { redfoxlogo } from "../../../assets/images/item/item";
 
 const Footer = (props) => {
   return (
@@ -20,7 +20,6 @@ const Footer = (props) => {
         </p>
         <p>Phúc lợi chào mừng ngập tràn, miễn phí hoàn toàn. </p>
         <p>Bản quyền thuộc Công ty TNHH Truyền Thông Redfox Network</p>
-        <img className="age" src={old} alt="18+" />
       </div>
     </HomeSection>
   );

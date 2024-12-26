@@ -31,20 +31,20 @@ const Welcome = (props) => {
             </a>
 
             <div className="info__app__mobile">
-              <a className="appstore" href="http://">
+              <a className="appstore ten__hover" target="_blank" href="https://www.apple.com/vn/app-store/">
                 <img src={AppStore} alt="ios" />
               </a>
-              <a className="appstore" href="http://">
+              <a className="google ten__hover" target="_blank" href="http://">
                 <img src={CHPlay} alt="google" />
               </a>
             </div>
             <div className="info__app__pc">
-              <a className="gialappc" href="http://">
+              <a className="gialappc ten__hover" target="_blank" href="http://">
                 <img src={GiaLapPC} alt="windows" />
               </a>
             </div>
             <div className="info__app__pay">
-              <a className="napthe" href="http://">
+              <a className="napthe ten__hover" target="_blank" href="http://">
                 <img src={NapThe} alt="card" />
               </a>
             </div>

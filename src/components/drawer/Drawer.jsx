@@ -1,12 +1,11 @@
 import React from "react";
 
 import "./drawer.scss";
-import { AppStore, ButtonNapThe, CHPlay, CongDong, FB, GiaLapPCButton, IconGame } from "../../assets/images/info/info";
+import { AppStore, ButtonNapThe, CHPlay, CongDong, Discord, FB, GiaLapPCButton, IconGame, Tiktok, Youtube } from "../../assets/images/info/info";
 
 const Drawer = () => {
   return (
     <div className="slide" id="slide">
-      {/* <img className="slide-btn" src="" alt="close" /> */}
       <div className="slide-content">
         <a href="##" className="slide-content-btn">
           <img src={IconGame} alt="ios" />
@@ -29,6 +28,14 @@ const Drawer = () => {
           </a>
           <a href="##" className="slide-content-ground-btn" target="_blank">
             <img src={FB} alt="voucherCenter" />
+          </a>          <a href="##" className="slide-content-ground-btn" target="_blank">
+            <img src={Tiktok} alt="voucherCenter" />
+          </a>
+          <a href="##" className="slide-content-ground-btn" target="_blank">
+            <img src={Discord} alt="voucherCenter" />
+          </a>
+          <a href="##" className="slide-content-ground-btn" target="_blank">
+            <img src={Youtube} alt="voucherCenter" />
           </a>
         </div>
       </div>

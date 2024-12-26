@@ -1,13 +1,20 @@
 import "./footer.scss";
 
 import React from "react";
-import { footermobile, footerweb } from "../../assets/images/footer/footer";
+import { redfoxlogo } from "../../assets/images/item/item";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <img className="footer_web" src={footerweb} alt="footer_web" />
-      <img className="footer_mobile" src={footermobile} alt="footer_mobile" />
+      <div className="footer__container">
+        <img className="logo__redfox" src={redfoxlogo} alt="logo-redfox" />
+        <p>
+          Danh Tướng Origin - Siêu phẩm game mobile đề tài Tam Quốc đồ hoạ hoạt
+          hình hot nhất 2024
+        </p>
+        <p>Phúc lợi chào mừng ngập tràn, miễn phí hoàn toàn. </p>
+        <p>Bản quyền thuộc Công ty TNHH Truyền Thông Redfox Network</p>
+      </div>
     </div>
   );
 };

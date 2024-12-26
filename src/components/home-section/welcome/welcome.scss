@@ -36,7 +36,7 @@
   &__info {
     @include flex(flex-end, flex-end);
     position: absolute;
-    bottom: 10rem;
+    bottom: 5%;
     right: 15rem;
     @include tablet {
       display: none;
@@ -45,10 +45,17 @@
     &__content {
       background-image: url("../../../assets/images/backgroud/Frame_Icon.png");
       background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 35rem;
+      height: 9rem;
 
       .info__app {
-        padding: 8px 20px;
+        padding: 10px 35px;
         @include flex(center, space-around);
+        .ten__hover:hover {
+          filter: brightness(1.5);
+          cursor: pointer;
+      }
 
         &__mobile,
         &__pc,

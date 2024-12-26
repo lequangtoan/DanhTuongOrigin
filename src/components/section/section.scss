@@ -11,16 +11,14 @@
     min-height: 100%;
     position: absolute;
     right: 0;
+    left: 50%;
+    transform: translate(-50%);
     @include tablet {
       right: auto;
-      left: 50%;
-      transform: translate(-50%);
       display: none !important;
       opacity: 0 !important;
     }
     @include mobile {
-      left: 50%;
-      transform: translate(-50%);
       display: none !important;
       opacity: 0 !important;
     }

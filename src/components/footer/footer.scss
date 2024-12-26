@@ -1,24 +1,19 @@
 @use "../../scss/" as *;
 
 .footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 1;
-  img {
-    width: 100%;
-  }
-
-  .footer_web {
-    display: block;
-    @include tablet {
-      display: none;
-    }
-  }
-  .footer_mobile {
-    display: none;
-    @include tablet {
-      display: block;
+  .footer__container {
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    padding: .5rem 0 1rem;
+    bottom: 0;
+    font-size: 1rem;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+  
+    .logo__redfox {
+      height: 4rem;
     }
   }
 }

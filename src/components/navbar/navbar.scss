@@ -62,17 +62,15 @@
       z-index: -100;
       text-align: center;
       top: calc(-100vh - $header-height);
-
       transition: all 0.3s ease-in-out;
     }
     &__item {
       @include flex(center, center);
       flex-direction: row;
       @include tablet {
-        top: $header-height;
+        justify-content: flex-start;
         height: calc(100vh - $header-height);
         flex-direction: column;
-        gap: 2rem;
         position: absolute;
         width: 100%;
         text-align: center;
@@ -91,7 +89,7 @@
           font-family: $font-family;
           line-height: $header-height;
           text-transform: uppercase;
-          text-shadow: #FC0 1px 0 10px;
+          text-shadow: #fc0 1px 0 10px;
           font-weight: 400;
           font-size: 1.25rem;
           text-align: center;
@@ -125,8 +123,81 @@
           }
         }
       }
+      .dropdown {
+        overflow: hidden;
+        width: 10rem;
+        font-family: $font-family;
+        line-height: $header-height;
+        text-transform: uppercase;
+        text-shadow: #fc0 1px 0 10px;
+        font-weight: 400;
+        font-size: 1.25rem;
+        text-align: center;
+        &:hover .dropdown-content {
+          top: $header-height;
+          @include tablet {
+            top: unset;
+          }
+        }
+        @include tablet {
+          width: 100%;
+          font-size: 2rem;
+          height: calc($header-height * 2);
+          line-height: calc($header-height * 2);
+        }
+        .dropdown-content {
+          top: -50rem;
+          position: absolute;
+          background-color: #50201ea3;
+          min-width: 10rem;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+          transition: all 0.4s ease-in-out;
+          z-index: -1;
+          @include tablet {
+            width: 100%;
+            z-index: 1;
+            top: unset;
+          }
+          a {
+            text-decoration: none;
+            display: block;
+            &:before {
+              content: "";
+              position: absolute;
+              z-index: -10;
+              display: block;
+              background: $main-color;
+              width: 10rem;
+              height: 0rem;
+              transition: all 0.2s ease;
+            }
+            &:hover {
+              &:before {
+                height: $header-height;
+                background: $main-color;
+                @include tablet {
+                  background-color: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+      .pc {
+        display: block;
+        @include tablet {
+          display: none;
+        }
+      }
+      .mobile {
+        display: none;
+        @include tablet {
+          display: block;
+        }
+      }
+
       .active {
-        width: 100%;
+        width: 10rem;
         height: $header-height;
         background-color: $main-color;
         @include tablet {
@@ -145,7 +216,7 @@
   }
   .menu__active {
     @include tablet {
-      top: calc($header-height);
+      top: calc($header-height * 3);
     }
   }
   &__icons {

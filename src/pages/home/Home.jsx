@@ -12,13 +12,12 @@ import {
   Feature,
 } from "./../../components/home-section";
 import { Scrolling } from "../../assets/images/item/item";
-import Footer from "../../components/home-section/footer/Footer";
 
 const swiperOptions = {
   modules: [Pagination, Mousewheel, EffectFade],
   mousewheel: true,
   pagination: true,
-  paginationClickable: true,
+  Clickable: true,
   parallax: true,
   speed: 500,
   slidesPerView: 1,
@@ -49,7 +48,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const feature = document.querySelectorAll(".footer");
+    const feature = document.querySelectorAll(".feature");
     const scroll = new IntersectionObserver(
       (entries) => {
         const scroll = document.getElementById("scroll");
@@ -86,9 +85,6 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           {({ isActive }) => <Feature isActive={isActive} />}
-        </SwiperSlide>
-        <SwiperSlide>
-          {({ isActive }) => <Footer isActive={isActive} />}
         </SwiperSlide>
       </Swiper>
       <div className="scrolled" id="scroll">

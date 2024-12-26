@@ -7,6 +7,9 @@ import NapThe from "./Nap_The.png";
 import ButtonNapThe from "./ButtonNapThe.png";
 import FB from "./Facebook.png";
 import CongDong from "./Cong_Dong.png";
+import Discord from "./Discord.png";
+import Tiktok from "./Tiktok.png";
+import Youtube from "./Youtube.png";
 
 export {
   IconGame,
@@ -18,4 +21,7 @@ export {
   ButtonNapThe,
   FB,
   CongDong,
+  Discord,
+  Tiktok,
+  Youtube,
 };
