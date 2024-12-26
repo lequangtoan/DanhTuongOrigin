@@ -106,6 +106,7 @@
       @include flex(center, center);
       flex-direction: row;
       @include tablet {
+        padding-top: 1rem;
         justify-content: flex-start;
         height: calc(100vh - $header-height);
         flex-direction: column;
@@ -118,8 +119,8 @@
         width: 100%;
         height: $header-height;
         @include tablet {
-          height: calc($header-height * 2);
-          line-height: calc($header-height * 2);
+          height: calc($header-height + 1rem);
+          line-height: calc($header-height + 1rem);
           text-align: center;
         }
         li {
@@ -145,8 +146,8 @@
           @include tablet {
             width: 100%;
             font-size: 2rem;
-            height: calc($header-height * 2);
-            line-height: calc($header-height * 2);
+            height: calc($header-height + 1rem);
+            line-height: calc($header-height + 1rem);
             text-align: center;
           }
           &:hover {
@@ -180,8 +181,8 @@
         @include tablet {
           width: 100%;
           font-size: 2rem;
-          height: calc($header-height * 2);
-          line-height: calc($header-height * 2);
+          height: calc($header-height + 1rem);
+          line-height: calc($header-height + 1rem);
         }
         .dropdown-content {
           top: -50rem;
@@ -240,8 +241,8 @@
         background-color: $main-color;
         @include tablet {
           width: 80%;
-          height: calc($header-height * 2);
-          line-height: calc($header-height * 2);
+          height: calc($header-height + 1rem);
+          line-height: calc($header-height + 1rem);
           background: linear-gradient(
             0.25turn,
             rgba(153, 66, 47, 0),
