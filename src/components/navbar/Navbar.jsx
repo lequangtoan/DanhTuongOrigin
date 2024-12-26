@@ -28,10 +28,10 @@ const Navbar = () => {
       <div className="navbar">
         <img className="navbar__logo" src={IconGame} alt="Logo-img" />
         <div className="navbar__btn">
-          <a href="##" className="slide-btn">
+          <a href="##" className="slide-btn btn1">
             <img src={btn_napthe} alt="napthe" />
           </a>
-          <a href="##" className="slide-btn">
+          <a href="##" className="slide-btn btn2">
             <img src={btn_taigame} alt="taigame" />
           </a>
         </div>

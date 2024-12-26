@@ -43,6 +43,10 @@
       left: 0;
     }
     .slide-btn {
+      animation: flase 1s ease infinite;
+      &:hover {
+        animation: none;
+      }
       img {
         @include tablet {
           height: calc($header-height + 1rem);
@@ -52,6 +56,40 @@
           height: calc($header-height + 1rem);
           margin-left: 0.5rem;
         }
+      }
+    }
+    .btn1 {
+      animation: flase1 1s ease infinite;
+      &:hover {
+        animation: none;
+      }
+    }
+    @keyframes flase1 {
+      0% {
+        filter: brightness(1.5);
+      }
+      50% {
+        filter: brightness(1);
+      }
+      100% {
+        filter: brightness(1.5);
+      }
+    }
+    .btn2 {
+      animation: flase2 1s ease infinite;
+      &:hover {
+        animation: none;
+      }
+    }
+    @keyframes flase2 {
+      0% {
+        filter: brightness(1);
+      }
+      50% {
+        filter: brightness(1.5);
+      }
+      100% {
+        filter: brightness(1);
       }
     }
   }
