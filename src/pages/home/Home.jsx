@@ -1,6 +1,6 @@
 import "./home.scss";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel, EffectFade } from "swiper/modules";
 
@@ -12,6 +12,7 @@ import {
   Feature,
 } from "./../../components/home-section";
 import { Scrolling } from "../../assets/images/item/item";
+import { TamQuocVoSong } from "../../assets/audio";
 
 const swiperOptions = {
   modules: [Pagination, Mousewheel, EffectFade],
@@ -68,8 +69,15 @@ const Home = () => {
     };
   }, []);
 
+  // const ref = useRef();
+
+  // useEffect(() => {
+  //   ref.current.pause();
+  // }, []);
+
   return (
     <>
+      <audio src={TamQuocVoSong} autoPlay={true} loop></audio>
       <Swiper {...swiperOptions}>
         <SwiperSlide>
           {({ isActive }) => <Welcome isActive={isActive} />}
