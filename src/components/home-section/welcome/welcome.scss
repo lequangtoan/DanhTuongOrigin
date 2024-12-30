@@ -20,7 +20,7 @@
       width: 90%;
       display: block;
       position: absolute;
-      bottom: 25%;
+      bottom: 22%;
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -41,6 +41,11 @@
     right: 15rem;
     @include tablet {
       // display: none;
+      @include flex(flex-end, center);
+      width: 100%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
     }
 
     &__content {
@@ -49,6 +54,10 @@
       background-size: 100% 100%;
       width: 35rem;
       height: 9rem;
+      @include tablet {
+        width: 45rem;
+        height: 11.5rem;
+      }
 
       .info__app {
         padding: 10px 35px;
